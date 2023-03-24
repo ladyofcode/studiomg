@@ -1,0 +1,24 @@
+:root {
+    --text-dark: #000000;
+    --text-light: #ffffff;
+    --background-light: #f0e3bf;
+    --background-dark: #000000;
+
+    --foreground: var(--text-dark);
+    --background: var(--background-light);
+}
+
+.darkmode {
+    --foreground: var(--text-light);
+    --background: var(--background-dark);
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+}
+
+button {
+    width: 100px;
+    height: 100px;
+}
