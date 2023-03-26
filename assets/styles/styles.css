@@ -2,24 +2,30 @@
     --text-dark: #464646;
     --text-light: #ffffff;
     --bg-light: #D9DFE7;
-    --bg-dark: #000000;
-    --menu-bg-light: #8f8d88;
-    --menu-bg-dark: #292929;
+    --bg-dark: #1B222C;
     --icon-light: #f4e1a3;
     --icon-dark: #7e7e7e;
-    --bg-shadow-light: #ffffff;
-    --bg-shadow-dark: #8B9CB6;
+    --box-shadow-light-highlight: hsla(0, 0%, 90%, 0.5);
+    --box-shadow-light-shadow: rgba(139, 156, 182, 0.5);
+    --box-shadow-dark-highlight: hsla(216, 23%, 20%, 0.463);
+    --box-shadow-dark-shadow: hsl(215, 24%, 10%);
     --container-padding: 1.6rem;
 
     --foreground: var(--text-dark);
     --background: var(--bg-light);
     --icon-color: var(--icon-dark);
+    --item-highlight: var(--box-shadow-light-highlight);
+    --item-shadow: var(--box-shadow-light-shadow);
+    --text-color: var(--text-dark);
 }
 
 .darkmode {
     --foreground: var(--text-light);
     --background: var(--bg-dark);
     --icon-color: var(--icon-light);
+    --item-highlight: var(--box-shadow-dark-shadow);
+    --item-shadow: var(--box-shadow-dark-highlight);
+    --text-color: var(--text-light);
 }
 
 body {
@@ -73,14 +79,14 @@ nav ul {
     padding: 0.8rem;
     padding-right: 1.6rem;
     margin: 0;
-    background-color: var(--bg-light);
-    box-shadow: 0px 16px 8px -16px var(--bg-shadow-dark);
+    background-color: var(--background);
+    box-shadow: 0px 16px 8px -16px var(--item-shadow);
 }
 
 nav ul li a {
     text-decoration: none;
     padding: 0.8rem;
-    color: var(--text-dark)
+    color: var(--text-color);
 }
 
 header,
@@ -126,7 +132,7 @@ header .content::before {
     height: 240px;
     /* border: 1px solid red; */
     border-radius: 24px;
-    box-shadow: inset 9px 9px 20px rgb(163, 177, 198, 0.6), inset -9px -9px 16px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 9px 9px 20px var(--item-shadow), inset -9px -9px 16px var(--item-highlight);
 }
 
 header .content p {
@@ -145,10 +151,10 @@ header .content p {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    background-color: var(--bg-light);
+    background-color: transparent;
     padding: 0.4rem 0.8rem;
     border-radius: 8px;
-    color: var(--text-dark);
+    color: var(--text-color);
 
     /* box-shadow: 4px 4px 3px rgb(163, 177, 198, 0.4), */
         /* -4px -4px 3px rgba(255, 255, 255, 0.4); */
@@ -188,15 +194,15 @@ nav,
 .divider,
 #team .container,
 #contact .container {
-    box-shadow: inset 9px 9px 20px rgb(163, 177, 198, 0.6), inset -9px -9px 16px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 9px 9px 20px var(--item-shadow), inset -9px -9px 16px var(--item-highlight);
 }
 
-#lab {
-    box-shadow: inset 9px 9px 20px rgb(163, 177, 198, 0.6),
-        inset -9px -9px 16px rgba(255, 255, 255, 0.5),
-        8px 8px 12px rgb(163, 177, 198, 0.5),
-        -8px -8px 12px rgba(255, 255, 255, 0.5);
-}
+/* #lab { 
+    box-shadow: inset 9px 9px 20px var(--item-shadow),
+        inset -9px -9px 16px var(--item-highlight),
+        8px 8px 12px var(--item-shadow),
+        -8px -8px 12px var(--item-highlight);
+}*/
 
 #lab,
 #window,
@@ -278,6 +284,10 @@ nav,
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.content div:first-of-type a:first-child {
+    padding-left: 0;
 }
 
 @media screen and (min-width: 640px) {
