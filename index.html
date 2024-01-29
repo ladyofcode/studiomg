@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,17 +33,23 @@
     </nav>
 
     <header>
-        <div class="container">
+        <div id="header-container">
             <div class="portal">
-                <div id="lab">
-                    <img src="./assets/images/DoorFrame.png" alt="">
-                    <img src="./assets/images/DoorL.png" alt="">
-                    <img src="./assets/images/DoorR.png" alt="">
+                <div id="lab-light" class="lab">
+                    <img src="./assets/images/DoorFrameLight.png" alt="">
+                    <img src="./assets/images/DoorLLight.png" alt="">
+                    <img src="./assets/images/DoorRLight.png" alt="">
+                    <img src="./assets/images/lab.jpg" alt="">
+                </div>
+                <div id="lab-dark" class="lab">
+                    <img src="./assets/images/DoorFrameDark.png" alt="">
+                    <img src="./assets/images/DoorLDark.png" alt="">
+                    <img src="./assets/images/DoorRDark.png" alt="">
                     <img src="./assets/images/lab.jpg" alt="">
                 </div>
             </div>
             <div class="content">
-                <h1>studiOMG</h1>
+                <h1>Solarspark</h1>
                 <p>Join us building a video game</p>
                 <div>
                     <a class="button-wide" href="https://ladyofcode.twitch.tv">
@@ -71,7 +78,14 @@
     <section id="feature">
         <div class="container">
             <div class="portal">
-                <div id="window"></div>
+                <div id="window-light" class="window">
+                    <img src="./assets/images/WindowLight.png" alt="">
+                    <img src="./assets/images/lab.jpg" alt="">
+                </div>
+                <div id="window-dark" class="window">
+                    <img src="./assets/images/WindowDark.png" alt="">
+                    <img src="./assets/images/lab.jpg" alt="">
+                </div>
             </div>
             <div class="content">
                 <h2>Whale Fall</h2>
@@ -96,9 +110,10 @@
         <div class="container">
             <h2>Team</h2>
             <div class="profile-card">
+                <img class="moulding" src="./assets/images/contact.png" alt="">
                 <div class="portrait-container">
                     <div class="portrait-container-inner">
-                        <img src="./assets/images/portrait.png" alt="">
+                        <img src="./assets/images/team/tabs.jpg" alt="">
                     </div>
                 </div>
                 <h3>Tabs</h3>
@@ -128,9 +143,10 @@
             </div>
 
             <div class="profile-card">
+                <img class="moulding" src="./assets/images/contact.png" alt="">
                 <div class="portrait-container">
                     <div class="portrait-container-inner">
-                        <img src="./assets/images/portrait.png" alt="">
+                        <img src="./assets/images/team/natalie.jpg" alt="">
                     </div>
                 </div>
                 <h3>Natalie</h3>
@@ -158,10 +174,12 @@
                     </a>
                 </div>
             </div>
+
             <div class="profile-card">
+                <img class="moulding" src="./assets/images/contact.png" alt="">
                 <div class="portrait-container">
                     <div class="portrait-container-inner">
-                        <img src="./assets/images/portrait.png" alt="">
+                        <img src="./assets/images/team/sachi.jpg" alt="">
                     </div>
                 </div>
                 <h3>Sachi</h3>
@@ -191,9 +209,10 @@
             </div>
 
             <div class="profile-card">
+                <img class="moulding" src="./assets/images/contact.png" alt="">
                 <div class="portrait-container">
                     <div class="portrait-container-inner">
-                        <img src="./assets/images/portrait.png" alt="">
+                        <img src="./assets/images/team/miles.jpg" alt="">
                     </div>
                 </div>
                 <h3>Miles</h3>
@@ -223,9 +242,10 @@
             </div>
 
             <div class="profile-card">
+                <img class="moulding" src="./assets/images/contact.png" alt="">
                 <div class="portrait-container">
                     <div class="portrait-container-inner">
-                        <img src="./assets/images/portrait.png" alt="">
+                        <img src="./assets/images/team/sophie.jpg" alt="">
                     </div>
                 </div>
                 <h3>Sophie</h3>
@@ -253,8 +273,6 @@
                     </a>
                 </div>
             </div>
-
-
         </div>
     </section>
 
@@ -263,17 +281,17 @@
     <section id="contact">
         <div class="container">
             <div class="content">
-                <h2>Contact</h2>
-                <p>email us at studiomg@gmail.com</p>
-                <p>or</p>
-                <a class="button-wide" href="https://ladyofcode.twitch.tv">
-                    <svg>
-                        <use xlink:href="#discord" />
-                    </svg>
-                    <span>
+                <div>
+                    <h2>Contact</h2>
+                    <p>email us at <a href="mailto:#">studiomg@gmail.com</a></p>
+                    <a class="button-wide" href="https://ladyofcode.twitch.tv">
+                        <svg>
+                            <use xlink:href="#discord" />
+                        </svg>
                         Find us on Discord
-                    </span>
-                </a>
+                    </a>
+                </div>
+                <img src="./assets/images/contact.png" alt="">
             </div>
         </div>
     </section>
@@ -306,6 +324,7 @@
     </svg>
 
     <script src="./assets/js/darkmode.js" type="module"></script>
+    <script src="./assets/js/scroll.js" type="module"></script>
 </body>
 
 </html>
